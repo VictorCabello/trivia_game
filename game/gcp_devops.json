@@ -1,0 +1,32 @@
+{
+    "results": [
+        {
+            "assessment_type": "multiple-choice",
+            "question_plain": "Your Team is desing a web-facing application for your organization. The application is intended to serve users globally. Your jos is to plan the capacity of the applictaion.\nFollwoing GCP's SRE best practice for capacity management, which of these is not recommend?",
+            "prompt":{
+                "explanation": "Correct Anser: D\nOption A, B and C are incorrect. These are the recommended approaches for capacity planning. Lead testing shows how the application will scale or fail under load; while monitoring allows for approach remedial the systm is not overloaded.\nOption D is Correct. This is not recommend becuase it is costly and there is o guarantee the aplication will need that amount of resources.",
+                "answers": [
+                    "Design for graceful degradation",
+                    "Carry out load testing",
+                    "Implement monitoring and alerting",
+                    "Provision and higher capacity to account for possible demand spikes"
+                ]
+            },
+            "correct_response": ["d"]
+        },
+        {
+            "assessment_type": "multiple-select",
+            "question_plain": "You are responsible for designing a new logs collection system in your organization. Your company has asked you to ensure all audit logs from all projects in the organization are aggregated in one location.\n How should you accomplish this?",
+            "prompt":{
+                "explanation": "Correct Answer B and D\nOption A i incorrect. In the console, the Logging bucket is created in Logging under log Storage, no in cloud store.\n OPtion B and D are Correct. Creating the logging bucket is done in Logging and the incorrect. The question asks for aggregating logs in one location, this does not support that.\n https://cloud.gloogle.com/logging/docs/central-log-storage",
+                "answers": [
+                    "Create a Project for collectin logs, and create a logging bucket in cloud storage using the console in that Project",
+                    "Create a Project for collecting logs, and create a logging bucket in Logging using the console in that Project",
+                    "Create a logs sink from the cli, specifying the type of logs to be collected, logging bucket, organization and the -include-children flag",
+                    "Create logs sink in every Project to teh logging bucket"
+                ]
+            },
+            "correct_response": ["b", "d"]
+        }
+    ]
+}
