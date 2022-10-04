@@ -1,10 +1,29 @@
-import json, xml
+import json
 
-def load_questions(fileloader, filename):
+
+def load_from_json(fileloader, filename):
+    """
+    Load questions for file system.
+
+    :param fileloader: function that is able to read from file system.
+    :param filename: name of the file that contains all the questions.
+    :return: a dic as a representation of the json file.
+    """
     f = open(fileloader(filename), "r")
     data = f.read()
     f.close()
-    data = json.loads(data)
+    return json.loads(data)
+
+
+def load_questions(fileloader, filename):
+    """
+    Load questions for file system.
+
+    :param fileloader: function that is able to read from file system.
+    :param filename: name of the file that contains all the questions.
+    :return: a dic with all the question information
+    """
+    data = load_from_json(fileloader, filename)
     return_value = []
     a_in_ascii = 97
 
